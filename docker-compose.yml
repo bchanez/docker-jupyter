@@ -5,6 +5,8 @@ services:
     container_name: jupyter
     image: jupyter/minimal-notebook
     volumes:
-      - ${PATH}:/home/jovyan/work
+      - ${PATH_WORK}
     ports:
       - ${PORT}:8888
+    environment:
+      - JUPYTER_TOKEN=NO_TOKEN
