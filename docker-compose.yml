@@ -5,8 +5,7 @@ services:
     container_name: jupyter
     build: .
     volumes:
-      - ${PATH_WORK}/src:/app/src/
-      - ${PATH_WORK}/data:/app/data/
+      - ${PATH_WORK}:/app
     ports:
       - ${PORT}:8888
     environment:
